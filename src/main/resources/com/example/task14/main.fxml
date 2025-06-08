@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.canvas.Canvas?>
+
+<StackPane xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.task14.Controller">
+    <!-- Анимированный фон -->
+    <Canvas fx:id="backgroundCanvas" width="600" height="400"/>
+    <!-- Основной интерфейс -->
+    <VBox alignment="CENTER" spacing="15" style="-fx-padding: 30;">
+        <Label text="Волшебная лотерея" style="-fx-font-size: 22; -fx-font-weight: bold;" />
+        <HBox spacing="10" alignment="CENTER">
+            <Button fx:id="ticket1Button" onAction="#onTicket1">
+                <graphic>
+                    <ImageView fitWidth="64" fitHeight="64">
+                        <image>
+                            <Image url="@images/ticket1.png"/>
+                        </image>
+                    </ImageView>
+                </graphic>
+            </Button>
+            <Button fx:id="ticket2Button" onAction="#onTicket2">
+                <graphic>
+                    <ImageView fitWidth="64" fitHeight="64">
+                        <image>
+                            <Image url="@images/ticket2.png"/>
+                        </image>
+                    </ImageView>
+                </graphic>
+            </Button>
+            <Button fx:id="ticket3Button" onAction="#onTicket3">
+                <graphic>
+                    <ImageView fitWidth="64" fitHeight="64">
+                        <image>
+                            <Image url="@images/ticket3.png"/>
+                        </image>
+                    </ImageView>
+                </graphic>
+            </Button>
+        </HBox>
+        <HBox alignment="CENTER" spacing="5">
+            <ImageView fitWidth="32" fitHeight="32">
+                <image>
+                    <Image url="@images/coin.png"/>
+                </image>
+            </ImageView>
+            <Label fx:id="coinsLabel" text="Монеты: 0" style="-fx-font-size: 16;"/>
+        </HBox>
+        <Button fx:id="addCoinButton" text="Получить монету" onAction="#onAddCoin" />
+        <Label fx:id="winsLabel" text="Выигрыши: 0" style="-fx-font-size: 16;" />
+        <Label fx:id="lossesLabel" text="Проигрыши: 0" style="-fx-font-size: 16;" />
+    </VBox>
+</StackPane>
